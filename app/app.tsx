@@ -12,8 +12,12 @@
 import "./i18n"
 import "./utils/ignore-warnings"
 import React from "react"
+import Navigation from './AppNavigator'
+// import Navigation from './DrawerAppNavigator'
+import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from "react-native-screens"
 enableScreens()
+
 
 export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"
 
@@ -58,7 +62,11 @@ export function QuestionsBoard({ questions, onSubmit }) {
 }
 
 export const App = () => {
-  return (
-    <QuestionsBoard questions={['How are you?','How old are you?','Where are you from?','When\'s your birthday?','What\'s your dream?']} onSubmit={() => {}} />
-  )
+  return <NavigationContainer>
+<Navigation />
+  </NavigationContainer> 
+  
+  // return (
+  //   <QuestionsBoard questions={['How are you?','How old are you?','Where are you from?','When\'s your birthday?','What\'s your dream?']} onSubmit={() => {}} />
+  // )
 }

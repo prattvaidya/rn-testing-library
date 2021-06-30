@@ -10,7 +10,7 @@ test('form submits two answers', () => {
       <QuestionsBoard questions={allQuestions} onSubmit={mockFn} />
     );
 
-    console.log(helpers)
+    // console.log(helpers)
 
     const { getAllByA11yLabel, getByText } = helpers
   
